@@ -2,7 +2,7 @@
 
 using System;
 
-namespace Problema2V2{
+namespace Update{
 	public class Program{
 		public static void Main(string[] args){
 			bool flag = true;
@@ -72,17 +72,16 @@ namespace Problema2V2{
 						indice ++;
 					}
 				}
-				
-				int contador = 0;
-				foreach(int i in suma){
-					if(contador == suma.Length - 1){
-						System.Console.Write(i);
-					}				
-				}
+				System.Console.ForegroundColor = System.ConsoleColor.Green;
+				System.Console.Write(String.Join(" + ", suma));
 
 				System.Console.Write(" = " + suma_cuadrados + "\n");
+				System.Console.ResetColor();
 
+				System.Console.ForegroundColor = System.ConsoleColor.Blue;
 				System.Console.WriteLine($"La suma de los cuadrado da como resultado: {suma_cuadrados}");
+				System.Console.ResetColor();
+
 
 				System.Console.Write("¿Continuar con otros numeros? (1) Si:  ");
 				int opcion = System.Convert.ToInt32(System.Console.ReadLine());
