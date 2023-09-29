@@ -1,9 +1,5 @@
-/*
+// iTz_DiLAN
 
-Jeison Salas Coloma - Ingenieria Civil Informatica - S1
-15.306.099-1
-
-*/
 using System;
 
 namespace Problema3{
