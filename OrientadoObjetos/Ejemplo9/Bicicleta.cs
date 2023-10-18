@@ -19,7 +19,7 @@ namespace Vehiculos{
     }
 
     public override void Describir(){
-      System.Console.WriteLine($"Informacion de la Bicicleta:\nModelo: {base.MarcaVehiculo}\nModelo: {base.ModeloVehiculo}\nAnio: {base.AnioVehiculo}\nVelocidades: {velocidadesBici}")
+      System.Console.WriteLine($"Informacion de la Bicicleta:\nModelo: {base.MarcaVehiculo}\nModelo: {base.ModeloVehiculo}\nAnio: {base.AnioVehiculo}\nVelocidades: {velocidadesBici}");
     }
   }
 }
