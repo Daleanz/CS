@@ -1,0 +1,36 @@
+using System;
+using Biblioteca;
+
+namespace Biblioteca{
+  public class Libro : ElementoBiblioteca{
+    private string autorLibro;
+    private int copiasDisponibles;
+
+    public Libro(string tituloElemento, int anioPublicacion, string autorLibro, int copiasDisponibles) : base(tituloElemento, anioPublicacion){
+      this.autorLibro = autorLibro;
+      this.copiasDisponibles = copiasDisponibles;
+    }
+
+    public string AutorLibro{
+      get{
+        return this.autorLibro;
+      }
+      set{
+        this.autorLibro = value;
+      }
+    }
+
+    public int CopiasDisponibles{
+      get{
+        return this.copiasDisponibles;
+      }
+      set{
+        this.copiasDisponibles = value;
+      }
+    }
+
+    public override void MostrarInformacion(){
+      System.Console.WriteLine($"Informacion Libro:\nTiulo: {base.TituloElemento}\nAnio Publicacion: {base.AnioPublicacion}\nAutor: {autorLibro}\nCopias Disponibles: {copiasDisponibles}");
+    }
+  }
+}
