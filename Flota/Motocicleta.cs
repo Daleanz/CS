@@ -1,0 +1,28 @@
+using System;
+using FlotaVehiculos;
+
+namespace FlotaVehiculos{
+    class Motocicleta : Vehiculo{
+        private string tipo;
+
+        public Motocicleta(string marca, string modelo, int anioFabricacion, double consumo, double kilometraje, string tipo) : base(marca, modelo, anioFabricacion, consumo, kilometraje){
+            this.tipo = tipo;
+        }
+
+        public string Tipo{
+            get{return tipo;}
+            set{this.tipo = value;}
+        }
+
+        public override void calcularEficienciaCombustible(){
+            double eficiencia = (base.Kilometraje / base.Consumo);
+            System.Console.WriteLine("Eficiencia Combustible: " + eficiencia);
+        }
+
+        public override void mostrarInformacion(){
+            System.Console.WriteLine("Informacion Completa de la Motocicleta:");
+            System.Console.WriteLine($"Marca: {base.Marca}\nModelo: {base.Modelo}\nAnio Fabricacion: {base.AnioFabricacion}\nConsumo: {base.Consumo}\nKilometraje: {base.Kilometraje}");
+            System.Console.WriteLine($"Tipo: {Tipo}");
+        }
+    }
+}
